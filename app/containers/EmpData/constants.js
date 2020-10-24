@@ -9,4 +9,9 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 
-export const CHANGE_USERNAME = 'boilerplate/Home/CHANGE_USERNAME';
+
+
+export const TEST = 'boilerplate/TEST'
+export const SET_TRACKER_DATA = 'boilerplate/SET_TRACKER_DATA'
+export const SET_LINKS_POSITION = 'boilerplate/SET_LINKS_POSITION'
+export const SET_HEADER_PROPS = 'boilerplate/SET_HEADER_PROPS'

@@ -14,8 +14,11 @@
  *        return { type: YOUR_ACTION_CONSTANT, var: var }
  *    }
  */
+import axios from 'axios';
 
-import { CHANGE_USERNAME } from './constants';
+import { TEST, SET_TRACKER_DATA, SET_LINKS_POSITION, SET_HEADER_PROPS } from './constants';
+// import { Config } from '../../Config.js';
+// import { saveLocalStorage, getToken } from 'components/Helper/Helper';
 
 /**
  * Changes the input field of the form
@@ -24,9 +27,34 @@ import { CHANGE_USERNAME } from './constants';
  *
  * @return {object} An action object with a type of CHANGE_USERNAME
  */
-export function changeUsername(username) {
-  return {
-    type: CHANGE_USERNAME,
-    username,
-  };
+
+
+export function test(value){
+  return{
+    type: TEST,
+    testVal: value
+  }
+}
+
+export function setTrackerData(value){
+  return{
+    type: SET_TRACKER_DATA,
+    trackerVal: value
+  }
+}
+
+export function setLinks(links, position){
+  return{
+    type: SET_LINKS_POSITION,
+    links: links,
+    position: position
+  }
+}
+
+export function setHeaderProps(header, under){
+  return{
+    type: SET_HEADER_PROPS,
+    header: header,
+    under: under
+  }
 }
