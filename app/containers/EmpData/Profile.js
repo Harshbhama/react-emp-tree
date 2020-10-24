@@ -46,6 +46,11 @@ const validate = values => {
       errors.position = 'Reporting and position cannot have same designation'
 
     }
+
+    if(values.reportsto !== undefined && values.position !== undefined && values.reportsto === "CEO" && values.position.substring(0,2) === "TL"){
+      errors.position = 'TL cannot report to CEO'
+
+    }
     return errors
   }
 
